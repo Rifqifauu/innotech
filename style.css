@@ -1,0 +1,197 @@
+header {
+    backface-visibility: 50%;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: sticky;
+    height: 100%;
+    border-radius: 5em;
+    margin-left: 3em;
+    margin-right: 3em;
+}
+
+body {
+    font-family: 'Istok Web', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.body {
+    display: block;
+}
+
+.navbar {
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 2em;
+}
+
+.navbar img {
+    margin-left: 3em;
+    vertical-align: middle;
+    /* Menyusun gambar sejajar dengan teks di dalam <ul> */
+}
+
+.navbar li {
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 2em;
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar li a:hover {
+    color: #FF725E;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 5em 5em 5em;
+}
+
+.text {
+    margin-top: -2em;
+    font-family: 'Istok Web', sans-serif;
+    max-width: 33em;
+}
+
+button {
+    margin-top: 2em;
+    width: 8em;
+    height: 2.5em;
+    border: none;
+    background-color: #FF725E;
+    border-radius: 20px;
+}
+
+button:hover {
+    background-color: black;
+    color: #FF725E;
+    cursor: pointer;
+}
+
+#services {
+    display: block;
+    margin-bottom: 5em;
+}
+
+.services {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    height: 25em;
+    width: 15em;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 1em;
+}
+
+.card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+
+/* Gaya untuk elemen dengan kelas "profile" */
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    text-align: center;
+    margin: 0 auto;
+    padding: 5em;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 50em;
+    height: auto;
+}
+
+
+/* Gaya untuk gambar profil */
+
+.profile img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    margin-right: 5em;
+}
+
+
+/* Gaya untuk teks deskripsi */
+
+.profile p {
+    line-height: 1.5;
+    color: #333;
+    text-align: left;
+}
+
+.form {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 2em;
+    margin-left: 5em;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    margin-left: 5em;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 50%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 7em;
+}
+
+.kontak {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-right: 5em;
+}
+
+form {
+    max-height: 100%;
+    width: 140%;
+}
+
+iframe {
+    width: 80%;
+    margin-left: -10em;
+}
