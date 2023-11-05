@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Istok+Web&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <img src="profil.png" alt="gambar" style="max-height:5em;margin-top: -1em;">
+            <ul class="ul">
+                <li><a id="home-link" href="" active>Beranda</a></li>
+                <li><a class="smooth-scroll" href="#services">Layanan</a></li>
+                <li><a class="smooth-scroll" href="#about-us">Tentang Kami</a></li>
+                <li><a class="smooth-scroll" href="#contact">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="body">
+        <section id="home">
+            <div class="text ">
+                <h1 style="font-size: 3em; ">Selamat <span style="color: #FF725E; ">Datang</span></h1>
+                <h2 id="typewriter-text" style="position:absolute;margin-top: -1em;color: #FF725E;">
+                </h2>
+                <p style="max-width: 30em;margin-top: 5em;"> Dengan semangat kreativitas dan komitmen yang tinggi, kami mengubah ide menjadi solusi yang inovatif. Masa depan yang cerah ada di tangan kita!
+                </p>
+                <a href="#contact "><button style="font-size: 1em;">Hire Us </button></a>&nbsp;
+                <a href="gambar.jpg" download="nama_gambar.jpg"><button style="font-size: 1em;">Poster</button></a>
+            </div>
+            <img src="b.jpg " alt=" " style="max-width: 30em; ">
+        </section>
+        <section id="services">
+            <h1 style="text-align: center; padding-top: 2em; font-size:2em; ">Layanan</h1>
+            <div class="services">
+                <div class="card " style="display: block; "><img src="uiux.jpg " alt="services ">
+                    <h3>UI/UX Design</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae aspernatur laborum molestiae eaque hic.</p>
+                </div>
+                <div class="card " style="display: block; "><img src="web.jpg " alt="services ">
+                    <h3>Web Development</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae aspernatur laborum molestiae eaque hic.</p>
+                </div>
+                <div class="card " style="display: block; "><img src="gp.jpg " alt="services ">
+                    <h3>Graphic Design</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae aspernatur laborum molestiae eaque hic.</p>
+                </div>
+            </div>
+        </section>
+        <section id="about-us" style="display: block;margin-top: 12em; padding-top:5em">
+            <h1 style=" text-align: center;font-size: 2em; ">Tentang<span style="color: #FF725E; "> Kami</span></h1>
+            <div class="profile">
+                <img src="profil.png" alt="profil-image">
+                <p>InnoTech adalah perusahaan inovatif yang berfokus pada teknologi digital dan solusi kreatif. Kami mendedikasikan diri untuk menciptakan pengalaman digital yang luar biasa bagi pelanggan kami. Kami memadukan keahlian dalam pengembangan
+                    web, pembuatan aplikasi, dan desain grafis untuk memberikan solusi untuk para klien. <br><br>
+                    <a href="instagram.com/"><img src="" alt="instagram"></a>
+                </p>
+            </div>
+        </section>
+        <section id="contact" style="display: block;">
+            <h1 style=" text-align: center;font-size: 2em; ">Kontak</h1>
+            <div class="kontak">
+                <form action="#">
+                    <div class="form-group">
+                        <label for="nama">Nama:</label>
+                        <input type="text" id="nama" name="nama" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pesan">Pesan:</label>
+                        <textarea id="pesan" name="pesan" required></textarea>
+                    </div>
+                    <button type="button" style="margin-left:5em;" onclick="sendwhatsapp();">Kirim Pesan</button>
+                </form>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.551104568343!2d109.24374107367817!3d-7.40408717290494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e655efa9b11331f%3A0x13ecfa29476eb9bb!2sUniversitas%20Jenderal%20Soedirman!5e0!3m2!1sid!2sid!4v1699165541475!5m2!1sid!2sid"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+    </div>
+    <script>
+        // JavaScript
+        document.addEventListener("DOMContentLoaded", function() {
+            // Mendapatkan semua tautan navigasi dengan kelas "smooth-scroll"
+            const smoothScrollLinks = document.querySelectorAll('.smooth-scroll');
+
+            // Menambahkan event listener untuk setiap tautan navigasi
+            smoothScrollLinks.forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+
+                    // Mendapatkan target elemen dengan menggunakan id dari tautan href
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+
+                    // Menggunakan scrollIntoView untuk menggulir ke elemen target dengan efek smooth scroll
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                });
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            // Mendapatkan elemen tautan "Home" berdasarkan ID
+            const homeLink = document.getElementById('home-link');
+
+            // Menambahkan event listener untuk tautan "Home"
+            homeLink.addEventListener('click', function(event) {
+                // Mencegah perilaku default dari tautan
+                event.preventDefault();
+
+                // Menggunakan scrollIntoView untuk menggulir ke atas halaman dengan efek smooth scroll
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+
+            });
+        });
+        const texts = [
+            "Kami memberikan layanan...",
+            "UI/UX Design",
+            "Web Development",
+            "Graphic Design"
+        ]; // Daftar teks yang ingin ditampilkan
+
+        const speed = 50; // Kecepatan typewriter (dalam milidetik per karakter)
+        let textIndex = 0;
+        let charIndex = 0;
+        const typewriterText = document.getElementById("typewriter-text");
+
+        function type() {
+            if (charIndex < texts[textIndex].length) {
+                typewriterText.innerHTML += texts[textIndex].charAt(charIndex);
+                charIndex++;
+                setTimeout(type, speed);
+            } else {
+                setTimeout(erase, 1000); // Tunggu 1 detik sebelum menghapus teks
+            }
+        }
+
+        function erase() {
+            if (charIndex > 0) {
+                typewriterText.innerHTML = texts[textIndex].substring(0, charIndex - 1);
+                charIndex--;
+                setTimeout(erase, speed);
+            } else {
+                textIndex = (textIndex + 1) % texts.length; // Pindah ke teks berikutnya
+                setTimeout(type, 500); // Tunggu 0.5 detik sebelum menampilkan teks berikutnya
+            }
+        }
+
+        // Panggil fungsi type saat halaman dimuat
+        window.onload = function() {
+            type();
+        };
+        document.getElementById("kirimButton").addEventListener("click", function() {
+            send();
+        });
+
+        function sendwhatsapp() {
+            var phonenumber = "+6285101556689";
+
+            var nama = document.querySelector("#nama").value;
+            var email = document.querySelector("#email").value;
+            var pesan = document.querySelector("#pesan").value;
+
+            var url = "https://wa.me/" + phonenumber + "?text=" +
+                "*Nama :* " + nama + "%0a" +
+                "*Email :* " + email + "%0a" +
+                "*Pesan :* " + pesan +
+                "%0a%0a";
+
+            window.open(url, '_blank').focus();
+        }
+    </script>
+</body>
+
+</html>
